@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Privacy Policy of ShayariDilSe - Learn how we handle your data, cookies, and user privacy.">
+  <title>Privacy Policy - ShayariDilSe</title>
+
+  <!-- Tailwind compiled CSS -->
+  <link href="/dist/output.css" rel="stylesheet">
+
+  <!--
+    Minimal color fallbacks so page displays correctly even if some Tailwind utilities
+    were removed by a purge step or custom config.
+  -->
+  <style>
+    :root{
+      /* Tailwind-like colors (fallbacks) */
+      --pink-600: #d946ef;    /* fallback purple/pink */
+      --pink-800: #be185d;
+      --purple-600: #7c3aed;
+      --indigo-500: #6366f1;
+      --yellow-100: #fff7ed;
+      --orange-100: #fed7aa;
+      --pink-200: #fecaca;
+
+      /* gradients */
+      --nav-gradient: linear-gradient(90deg, #fecaca 0%, #fed7aa 50%, #fff7ed 100%);
+      --header-gradient: linear-gradient(90deg, #a855f7 0%, #d946ef 50%, #6366f1 100%);
+      --mobile-menu-gradient: linear-gradient(180deg, #fde8ef 0%, #fff7ed 100%);
+    }
+
+    /* Visible focus ring for keyboard users (tiny inline to ensure available) */
+    a:focus-visible, button:focus-visible { outline: 3px solid rgba(99,102,241,0.18); outline-offset: 2px; border-radius: 6px; }
+
+    /* Small helper so very long text wraps nicely in cards */
+    .wrap-words { word-break: break-word; }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 leading-relaxed">
+
+  <!-- 🌸 Navbar -->
+  <nav
+    id="navbar"
+    class="fixed top-0 left-0 w-full z-50 shadow-md transition-all duration-300 ease-in-out will-change-transform opacity-0 -translate-y-2"
+    style="background: var(--nav-gradient);"
+    aria-label="Primary Navigation"
+  >
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+
+        <!-- 🌿 Brand -->
+        <a href="/dist/" class="flex items-center space-x-2 group" aria-label="ShayariDilSe Home">
+          <span class="text-2xl font-serif tracking-wide transition-transform duration-300 group-hover:scale-105"
+                style="color:var(--pink-800);">
+            💖 ShayariDilSe
+          </span>
+        </a>
+
+        <!-- 📜 Desktop Menu -->
+        <div class="hidden md:flex items-center space-x-8 font-serif text-lg">
+          <a href="/dist/" class="relative pb-1 border-b-2 border-transparent hover:border-pink-600 hover:text-pink-600 transition" style="color:inherit">Home</a>
+          <a href="/dist/about.html" class="relative pb-1 border-b-2 border-transparent hover:border-pink-600 hover:text-pink-600 transition" style="color:inherit">About</a>
+          <a href="/dist/contact.html" class="relative pb-1 border-b-2 border-transparent hover:border-pink-600 hover:text-pink-600 transition" style="color:inherit">Contact</a>
+          <a href="/dist/terms.html" class="relative pb-1 border-b-2 border-transparent hover:border-pink-600 hover:text-pink-600 transition" style="color:inherit">Terms</a>
+          <!-- active page -->
+          <a href="/dist/privacy.html" class="relative pb-1 border-b-2" style="border-color:var(--pink-600); color:var(--pink-800);">Privacy</a>
+        </div>
+
+        <!-- 📱 Mobile Menu Button -->
+        <button
+          id="menu-btn"
+          class="md:hidden relative w-9 h-9 flex flex-col justify-center items-center focus:outline-none"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <span class="line1 block w-7 h-0.5 rounded origin-center transition-transform duration-300 ease-in-out" style="background:#be185d"></span>
+          <span class="line2 block w-7 h-0.5 rounded my-1 transition-opacity duration-200 ease-in-out" style="background:#be185d"></span>
+          <span class="line3 block w-7 h-0.5 rounded origin-center transition-transform duration-300 ease-in-out" style="background:#be185d"></span>
+          <span class="sr-only">Menu</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- 📱 Mobile Menu -->
+    <div
+      id="mobile-menu"
+      class="md:hidden overflow-hidden max-h-0 opacity-0 pointer-events-none transition-all duration-300 ease-out"
+      style="background: var(--mobile-menu-gradient);"
+    >
+      <div class="px-4 pb-4 flex flex-col space-y-2 font-serif text-lg">
+        <a href="/dist/" class="block py-2 border-b border-transparent hover:border-pink-600 text-pink-800 hover:text-pink-600 transition">Home</a>
+        <a href="/dist/about.html" class="block py-2 border-b border-transparent hover:border-pink-600 text-pink-800 hover:text-pink-600 transition">About</a>
+        <a href="/dist/contact.html" class="block py-2 border-b border-transparent hover:border-pink-600 text-pink-800 hover:text-pink-600 transition">Contact</a>
+        <a href="/dist/terms.html" class="block py-2 border-b border-transparent hover:border-pink-600 text-pink-800 hover:text-pink-600 transition">Terms</a>
+        <a href="/dist/privacy.html" class="block py-2 border-b-2 border-pink-600 text-pink-600">Privacy</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Spacer -->
+  <div class="h-16" aria-hidden="true"></div>
+
+  <!-- Header -->
+  <header class="p-6 text-white shadow-lg" style="background: var(--header-gradient);">
+    <div class="max-w-6xl mx-auto">
+      <h1 class="text-3xl font-bold">Privacy Policy</h1>
+      <p class="text-sm mt-1">Effective Date: August 17, 2025</p>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="max-w-4xl mx-auto p-6 space-y-8 wrap-words" role="main" id="main">
+    <section>
+      <h2 class="text-2xl font-semibold" style="color:var(--indigo-500)">1. Introduction</h2>
+      <p>Welcome to <strong>ShayariDilSe</strong>. Your privacy is important to us. This Privacy Policy explains how we handle your information when you visit our site.</p>
+    </section>
+
+    <section>
+      <h2 class="text-2xl font-semibold" style="color:var(--indigo-500)">2. Information We Collect</h2>
+      <p>We <strong>do not collect personal information</strong> unless you voluntarily share it (for example, via the contact form).</p>
+      <ul class="list-disc pl-6 mt-2">
+        <li><strong>Contact Form Data</strong> (Name, Email, Message) – if you choose to reach out.</li>
+        <li><strong>Cookies / Analytics</strong> – may be used to improve website experience.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 class="text-2xl font-semibold" style="color:var(--indigo-500)">3. How We Use Your Information</h2>
+      <ul class="list-disc pl-6">
+        <li>To improve user experience and website performance.</li>
+        <li>To respond to inquiries via the contact form.</li>
+        <li>To analyze website traffic and trends.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 class="text-2xl font-semibold" style="color:var(--indigo-500)">4. Third-Party Services</h2>
+      <p>We may use services like <strong>Google Analytics</strong> or <strong>EmailJS</strong>. These services may collect limited technical data.</p>
+    </section>
+
+    <section>
+      <h2 class="text-2xl font-semibold" style="color:var(--indigo-500)">5. Cookies</h2>
+      <p>Our site may use cookies to enhance browsing. You can disable cookies in your browser settings.</p>
+    </section>
+
+    <section>
+      <h2 class="text-2xl font-semibold" style="color:var(--indigo-500)">6. Data Security</h2>
+      <p>We take reasonable steps to protect your data. However, no online service is 100% secure.</p>
+    </section>
+
+    <section>
+      <h2 class="text-2xl font-semibold" style="color:var(--indigo-500)">7. Children's Privacy</h2>
+      <p>This website is not intended for children under 13. We do not knowingly collect data from minors.</p>
+    </section>
+
+    <section>
+      <h2 class="text-2xl font-semibold" style="color:var(--indigo-500)">8. Updates</h2>
+      <p>We may update this Privacy Policy from time to time. Changes will be posted here with an updated date.</p>
+    </section>
+
+    <section>
+      <h2 class="text-2xl font-semibold" style="color:var(--indigo-500)">9. Contact Us</h2>
+      <p>If you have questions about this Privacy Policy, please contact us via our <a href="/dist/contact.html" class="text-blue-600 hover:underline">Contact Page</a>.</p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-100 py-8 mt-12 border-t">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-700">
+      <p>© 2025 ShayariDilSe. All rights reserved.</p>
+      <div class="mt-3 flex flex-wrap justify-center gap-4 text-sm">
+        <a href="/dist/about.html" class="hover:text-purple-700">About</a>
+        <a href="/dist/terms.html" class="hover:text-purple-700">Terms</a>
+        <a href="/dist/privacy.html" class="hover:text-purple-700">Privacy</a>
+        <a href="/dist/sitemap.xml" class="hover:text-purple-700">Sitemap</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- keep existing javascript that controls the nav, lazy loading etc -->
+  <script type="module" src="javascript.js" defer></script>
+</body>
+</html>

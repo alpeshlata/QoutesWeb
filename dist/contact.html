@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact ShayariDilSe — Reach Out to Us</title>
+  <meta name="description" content="Get in touch with ShayariDilSe. Share your suggestions, request categories, or ask questions about Hindi & Urdu Shayari and curated quotes." />
+  <!-- EmailJS SDK -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <link href="/dist/output.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50 text-gray-900">
+  <!-- 🌸 Navbar -->
+  <nav
+    id="navbar"
+    class="fixed top-0 left-0 w-full z-50 bg-gradient-to-r from-pink-200 via-orange-100 to-yellow-100 shadow-md
+           transition-all duration-300 ease-in-out will-change-transform opacity-0 -translate-y-2"
+  >
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+
+        <!-- 🌿 Brand -->
+        <a href="/" class="flex items-center space-x-2 group" aria-label="ShayariDilSe Home">
+          <span class="text-2xl font-serif text-pink-800 tracking-wide transition-transform duration-300
+                       group-hover:scale-105 group-hover:text-pink-600">
+            💖 ShayariDilSe
+          </span>
+        </a>
+
+        <!-- 📜 Desktop Menu -->
+        <div class="hidden md:flex items-center space-x-8 font-serif text-lg">
+          <a href="/dist/" class="nav-link relative pb-1 border-b-2 border-transparent hover:border-pink-600 hover:text-pink-600 transition">Home</a>
+          <a href="/dist/about.html" class="nav-link relative pb-1 border-b-2 border-transparent hover:border-pink-600 hover:text-pink-600 transition">About</a>
+          <a href="/dist/contact.html" class="nav-link relative pb-1 border-b-2 border-transparent hover:border-pink-600 hover:text-pink-600 transition">Contact</a>
+          <a href="/dist/terms.html" class="nav-link relative pb-1 border-b-2 border-transparent hover:border-pink-600 hover:text-pink-600 transition">Terms</a>
+          <a href="/dist/privacy.html" class="nav-link relative pb-1 border-b-2 border-transparent hover:border-pink-600 hover:text-pink-600 transition">Privacy</a>
+        </div>
+
+        <!-- 📱 Mobile Menu Button -->
+        <button
+          id="menu-btn"
+          class="md:hidden relative w-9 h-9 flex flex-col justify-center items-center focus:outline-none"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <!-- Hamburger Lines -->
+          <span class="line1 block w-7 h-0.5 bg-pink-800 rounded origin-center transition-transform duration-300 ease-in-out"></span>
+          <span class="line2 block w-7 h-0.5 bg-pink-800 rounded my-1 transition-opacity duration-200 ease-in-out"></span>
+          <span class="line3 block w-7 h-0.5 bg-pink-800 rounded origin-center transition-transform duration-300 ease-in-out"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- 📱 Mobile Menu -->
+    <div
+      id="mobile-menu"
+      class="md:hidden overflow-hidden max-h-0 opacity-0 pointer-events-none
+             transition-all duration-300 ease-out
+             bg-gradient-to-b from-pink-100 to-yellow-50 shadow-inner"
+    >
+         <div class="px-4 pb-4 flex flex-col space-y-2 font-serif text-lg">
+        <a href="/dist/" class="block border-b border-transparent hover:border-pink-600 text-pink-800 hover:text-pink-600 transition py-2">Home</a>
+        <a href="/dist/about.html" class="block border-b border-transparent hover:border-pink-600 text-pink-800 hover:text-pink-600 transition py-2">About</a>
+        <a href="/dist/contact.html" class="block border-b border-transparent hover:border-pink-600 text-pink-800 hover:text-pink-600 transition py-2">Contact</a>
+        <a href="/dist/terms.html" class="block border-b border-transparent hover:border-pink-600 text-pink-800 hover:text-pink-600 transition py-2">Terms</a>
+        <a href="/dist/privacy.html" class="nav-link relative pb-1 border-b-2 border-transparent hover:border-pink-600 hover:text-pink-600 transition">Privacy</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Spacer -->
+  <div class="h-16"></div>
+
+  <!-- Hero -->
+  <section class="bg-gradient-to-r from-purple-500 via-pink-500 to-indigo-500 text-black">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
+      <h1 class="text-3xl md:text-5xl font-bold">Contact ShayariDilSe</h1>
+      <p class="mt-4 text-lg md:text-xl text-white/90 max-w-2xl mx-auto">
+        Have suggestions, requests, or questions? We'd love to hear from you! Connect with us and help make ShayariDilSe even better.
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact Form -->
+  <section class="py-16">
+    <div class="max-w-lg mx-auto bg-white p-8 rounded-2xl shadow-xl relative">
+      
+      <!-- Alert Popup -->
+      <div id="alertBox" class="hidden fixed top-5 left-1/2 transform -translate-x-1/2 z-50 px-6 py-4 rounded-xl text-white font-semibold shadow-lg transition-all duration-300">
+        Message
+      </div>
+
+      <h2 class="text-2xl font-bold text-purple-700 text-center mb-4">Contact Us</h2>
+      <p class="text-gray-600 text-center mb-6">Send us your message or suggestions.</p>
+
+      <form id="contact-form" class="space-y-4">
+        <input type="hidden" name="time" id="time" value="">
+
+        <div class="flex flex-col">
+          <label class="mb-1 font-medium text-gray-700">Name</label>
+          <input 
+            type="text" 
+            name="name" 
+            required 
+            class="px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-400"
+            placeholder="Your Name"
+          >
+        </div>
+
+        <div class="flex flex-col">
+          <label class="mb-1 font-medium text-gray-700">Email</label>
+          <input 
+            type="email" 
+            name="email" 
+            required 
+            class="px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-400"
+            placeholder="Your Email"
+          >
+        </div>
+
+        <div class="flex flex-col">
+          <label class="mb-1 font-medium text-gray-700">Subject</label>
+          <input 
+            type="text" 
+            name="title" 
+            required 
+            class="px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-400"
+            placeholder="Subject"
+          >
+        </div>
+
+        <div class="flex flex-col">
+          <label class="mb-1 font-medium text-gray-700">Message</label>
+          <textarea 
+            name="message" 
+            required 
+            rows="5" 
+            class="px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-400"
+            placeholder="Your Message"
+          ></textarea>
+        </div>
+
+        <button 
+          type="submit" 
+          class="w-full bg-gradient-to-r from-purple-600 to-pink-500 text-white font-semibold py-3 rounded-xl shadow-lg hover:from-purple-700 hover:to-pink-600 transition-all"
+        >
+          Send Message
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-100 py-8">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-700">
+      <p>© 2025 ShayariDilSe. All rights reserved.</p>
+      <p class="mt-2 space-x-4">
+        <a href="/about" class="hover:text-purple-700">About</a>
+        <a href="/terms" class="hover:text-purple-700">Terms</a>
+        <a href="/sitemap.xml" class="hover:text-purple-700">Sitemap</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- EmailJS Initialization & Submit -->
+  <script>
+    emailjs.init("D2f9lCRnrxlB-P5S5"); // Your EmailJS public key
+
+    const contactForm = document.getElementById("contact-form");
+    const alertBox = document.getElementById("alertBox");
+
+    function showAlert(message, type = "success") {
+      alertBox.textContent = message;
+      alertBox.className = `fixed top-5 left-1/2 transform -translate-x-1/2 z-50 px-6 py-4 rounded-xl font-semibold shadow-lg transition-all duration-300 ${
+        type === "success" ? "bg-green-500" : "bg-red-500"
+      }`;
+      alertBox.classList.remove("hidden");
+      setTimeout(() => {
+        alertBox.classList.add("hidden");
+      }, 4000);
+    }
+
+    contactForm.addEventListener("submit", function(e) {
+      e.preventDefault();
+      document.getElementById("time").value = new Date().toLocaleString();
+
+      emailjs.sendForm('service_q7jpfx9', 'template_rzjgw43', this)
+        .then(() => {
+          showAlert("Message sent successfully! 🎉", "success");
+          contactForm.reset();
+        }, (error) => {
+          console.error(error);
+          showAlert("Oops! Something went wrong.", "error");
+        });
+    });
+  </script>
+     <script type="module" src="javascript.js" defer></script>
+</body>
+</html>
